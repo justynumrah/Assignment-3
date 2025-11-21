@@ -15,7 +15,9 @@ app.set('views', path.join(__dirname, 'server/views'));
 // Routes
 const homeRoutes = require('./server/routes/homeRoutes');
 const workoutRoutes = require('./server/routes/workoutRoutes');
+const entryRoutes = require('./server/routes/entryRoutes');
 
+app.use('/entries', entryRoutes);
 app.use('/', homeRoutes);
 app.use('/workouts', workoutRoutes);
 
