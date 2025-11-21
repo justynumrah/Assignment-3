@@ -14,15 +14,7 @@
     <link rel="stylesheet" href="/content/app.css">
   </head>
   <body>
-  <!--<header class="bg-dark text-white p-3 mb-4">
-    <div class="container">
-      <h1 class="mb-0">Workout Tracker</h1>
-      <nav class="mt-2">
-        <a href="/" class="text-white me-3">Home</a>
-        <a href="/workouts" class="text-white">Workouts</a>
-      </nav>
-    </div>
-  </header> -->
+  
 
   <!--Nav Bar-->
    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
@@ -38,9 +30,9 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <% if(title === 'Home'){ %>
-            <a class="nav-link active" aria-current= "page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
+            <a class="nav-link active" aria-current= "page" href="/"><i class="fa-solid fa-lg fa-house"></i> Home</a>
             <% } else { %>
-            <a class="nav-link" aria-current= "page" href="/home"><i class="fa-solid fa-lg fa-house"></i> Home</a>
+            <a class="nav-link" aria-current= "page" href="/"><i class="fa-solid fa-lg fa-house"></i> Home</a>
             <% } %>
           </li>
 
@@ -57,14 +49,6 @@
             <a class="nav-link active" aria-current= "page" href="/entries"><i class="fa-solid fa-book"></i> Entries</a>
             <% } else { %>
             <a class="nav-link" aria-current= "page" href="/entries"><i class="fa-solid fa-book"></i> Entries</a>
-            <% } %>
-          </li>
-          
-          <li class="nav-item">
-            <% if(title === 'Contact Me'){ %>
-            <a class="nav-link active" aria-current= "page" href="/contactus"><i class="fa-solid fa-lg fa-mobile-screen-button"></i> Contact Us</a>
-            <% } else { %>
-            <a class="nav-link" aria-current= "page" href="/contactus"><i class="fa-solid fa-lg fa-mobile-screen-button"></i> Contact Us</a>
             <% } %>
           </li>
         </ul>

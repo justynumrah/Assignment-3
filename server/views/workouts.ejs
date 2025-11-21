@@ -1,5 +1,7 @@
+<%- include('partials/header') %>
 <form action="/workouts" method="POST">
   <input type="text" name="name" placeholder="Workout name" required>
   <input type="number" name="duration" placeholder="Duration (minutes)" required>
   <button type="submit">Add Workout</button>
 </form>
+<%- include('partials/footer') %>
