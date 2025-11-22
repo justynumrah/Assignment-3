@@ -1,12 +1,12 @@
-const mongoose = require('../configs/db');
+const mongoose = require('mongoose');
 
 const workoutSchema = new mongoose.Schema({
-  entryNum: Number,
-  title: String,
-  message: String,
-  date: Number,
-  month: Number,
-  year: Number
+  WorkoutTitle: String,
+  Date: String,
+  WorkoutTime: String,
+  TargetAreas: String,
+  ExerciseList: String,
+  Reflection: String
 });
 
 module.exports = mongoose.model('Workout', workoutSchema);

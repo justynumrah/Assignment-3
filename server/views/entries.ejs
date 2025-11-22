@@ -11,42 +11,44 @@
                     <input type="text" class="form-control"
                     id="nameTextField"
                     placeholder = "Enter your workout title"
-                    name="EntryNum" required>
+                    name="WorkoutTitle" required>
                 </div> 
                  <div class = "form-group">
                     <label for="titleTextField">Date</label>
                     <input type="text" class="form-control"
                     id="titleTextField"
                     placeholder = "Enter todays date"
-                    name="Title" required>
+                    name="Date" required>
                 </div> 
                  <div class = "form-group">
-                    <label for="messageTextArea">Workout Time</label>
-                    <textarea type="text" class="form-control"
-                    id="messageTextArea"
-                    placeholder = "How long did your workout take"></textarea
-                    name="Message" required></textarea>
-                </div> 
-                <div class = "form-group">
-                    <label for="dateTextField">Target Areas</label>
+                    <label for="WorkoutTextField">Workout Time</label>
                     <input type="text" class="form-control"
-                    id="dateTextField"
+                    id="WorkoutTextField"
+                    placeholder = "Enter your workout title"
+                    name="WorkoutTime" required>
+                </div>
+                <div class = "form-group">
+                    <label for="TargetTextField">Target Areas</label>
+                    <input type="text" class="form-control"
+                    id="TargetTextField"
                     placeholder = "Which muscle groups did you target"
-                    name="Date" required>
+                    name="TargetAreas" required>
+                </div>
                 <div class = "form-group">
                     <label for="monthTextField">Exercise List</label>
                     <input type="text" class="form-control"
                     id="monthTextField"
                     placeholder = "List the exercises you did"
-                    name="Month" required>
-                </div> 
-                <div class = "form-group">
-                    <label for="yearTextField">Reflection</label>
-                    <input type="text" class="form-control"
-                    id="yearTextField"
-                    placeholder = "How did your workout go?"
-                    name="Year" required>
-                </div> 
+                    name="ExerciseList" required>
+                </div>
+                <div class="form-group">
+                    <label for="reflectionField">Reflection</label>
+                    <textarea class="form-control"
+                              id="reflectionField"
+                              name="Reflection"
+                              placeholder="How long did your workout take"
+                              required></textarea>
+                </div>
                 <br>
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit

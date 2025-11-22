@@ -52,4 +52,13 @@ router.post('/:id/delete', async (req, res) => {
   }
 });
 
+router.post('/delete/:id', async (req, res) => {
+  try {
+    await Workout.findByIdAndDelete(req.params.id);
+    res.redirect('/workouts');
+  } catch (err) {
+    console.error('Error deleting workout:', err);
+    res.status(500).send('Error deleting workout');
+  }
+});
 module.exports = router;

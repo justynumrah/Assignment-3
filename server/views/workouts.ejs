@@ -1,10 +1,41 @@
 <%- include('partials/header') %>
-<form action="/workouts" method="POST">
-  <input type="number" name="entryNum" placeholder="Entry Number" required>
-  <input type="text" name="title" placeholder="Title" required>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <textarea name="message" placeholder="Message" required></textarea>
-</form>
+<%- include('partials/header') %>
+<div class="container" style="margin-top:80px;">
+  <h1><%= title %></h1>
+
+  <% if (workouts.length === 0) { %>
+    <p>No workouts saved yet. Add one from the <a href="/entries">Entries page</a>.</p>
+  <% } else { %>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Workout Title</th>
+          <th>Date</th>
+          <th>Workout Time</th>
+          <th>Target Areas</th>
+          <th>Exercise List</th>
+          <th>Reflection</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% workouts.forEach(workout => { %>
+          <tr>
+            <td>
+            <form action="/workouts/delete/<%= workout._id %>" method="POST" onsubmit="return confirm('Delete this workout?');">
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </form>
+            </td>
+            <td><%= workout.WorkoutTitle %></td>
+            <td><%= workout.Date %></td>
+            <td><%= workout.WorkoutTime %></td>
+            <td><%= workout.TargetAreas %></td>
+            <td><%= workout.ExerciseList %></td>
+            <td><%= workout.Reflection %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</div>
+<%- include('partials/footer') %>
 <%- include('partials/footer') %>

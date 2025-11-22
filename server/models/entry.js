@@ -1,9 +1,15 @@
-const mongoose = require('../configs/db');
+const express = require('express');
+const router = express.Router();
+const Workout = require('../models/workout');
 
-const entrySchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  content: { type: String, required: true },
-  date: { type: Date, default: Date.now }
+// Show entries (same data, different view)
+router.get('/', async (req, res) => {
+  try {
+    const workouts = await Workout.find().sort({ Date: -1 });
+    res.render('entries', { title: 'Workout Entries', workouts });
+  } catch (err) {
+    res.status(500).send('Error loading entries');
+  }
 });
 
-module.exports = mongoose.model('Entry', entrySchema);
+module.exports = router;
