@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
 // Handle form submission (optional — if you want to allow posting from /entries)
 router.post('/', async (req, res) => {
   try {
+    console.log('Incoming data:', req.body); 
     await Workout.create(req.body);
     res.redirect('/workouts');
   } catch (err) {

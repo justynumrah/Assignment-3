@@ -1,11 +1,11 @@
 <%- include('partials/header') %>
-<div style="margin-top:80px;"></div>"
+<div style="margin-top:80px;"></div>
 <div class ="container">
     <div class="row">
         <div class = "offset-md-3 col-md-6">
-            <h1><% title %></h1>
+            <h1><%= title %></h1>
 
-            <form class="form" method="post">
+            <form class="form" method="post" action="/entries">
                 <div class = "form-group">
                     <label for="nameTextField">Workout Title</label>
                     <input type="text" class="form-control"
