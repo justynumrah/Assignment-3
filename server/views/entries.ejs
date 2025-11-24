@@ -1,62 +1,88 @@
+<!-- Include the shared header partial -->
 <%- include('partials/header') %>
-<div style="margin-top:80px;"></div>
-<div class ="container">
-    <div class="row">
-        <div class = "offset-md-3 col-md-6">
-            <h1><%= title %></h1>
 
-            <form class="form" method="post" action="/entries">
-                <div class = "form-group">
-                    <label for="nameTextField">Workout Title</label>
-                    <input type="text" class="form-control"
-                    id="nameTextField"
-                    placeholder = "Enter your workout title"
-                    name="WorkoutTitle" required>
-                </div> 
-                 <div class = "form-group">
-                    <label for="titleTextField">Date</label>
-                    <input type="text" class="form-control"
-                    id="titleTextField"
-                    placeholder = "Enter todays date"
-                    name="Date" required>
-                </div> 
-                 <div class = "form-group">
-                    <label for="WorkoutTextField">Workout Time</label>
-                    <input type="text" class="form-control"
-                    id="WorkoutTextField"
-                    placeholder = "Enter your workout title"
-                    name="WorkoutTime" required>
-                </div>
-                <div class = "form-group">
-                    <label for="TargetTextField">Target Areas</label>
-                    <input type="text" class="form-control"
-                    id="TargetTextField"
-                    placeholder = "Which muscle groups did you target"
-                    name="TargetAreas" required>
-                </div>
-                <div class = "form-group">
-                    <label for="monthTextField">Exercise List</label>
-                    <input type="text" class="form-control"
-                    id="monthTextField"
-                    placeholder = "List the exercises you did"
-                    name="ExerciseList" required>
-                </div>
-                <div class="form-group">
-                    <label for="reflectionField">Reflection</label>
-                    <textarea class="form-control"
-                              id="reflectionField"
-                              name="Reflection"
-                              placeholder="How long did your workout take"
-                              required></textarea>
-                </div>
-                <br>
-                <button class="btn btn-primary" type="submit">
-                    <i class="fas fa-edit"></i> Submit
-                </button>
-                <a href = "/Entries" class="btn btn-warning">
-                    <i class="fas fa-undo"></i> Delete
-                </a>
-            </form>
+<!-- Add spacing below the fixed header -->
+<div style="margin-top:80px;"></div>
+
+<!-- Main container for the form -->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+
+      <!-- Page title passed from the route -->
+      <h1><%= title %></h1>
+
+      <!-- Workout entry form -->
+      <form class="form" method="post" action="/entries">
+
+        <!-- Workout Title input -->
+        <div class="form-group">
+          <label for="nameTextField">Workout Title</label>
+          <input type="text" class="form-control"
+                 id="nameTextField"
+                 placeholder="Enter your workout title"
+                 name="WorkoutTitle" required>
         </div>
+
+        <!-- Date input -->
+        <div class="form-group">
+          <label for="titleTextField">Date</label>
+          <input type="text" class="form-control"
+                 id="titleTextField"
+                 placeholder="Enter today's date"
+                 name="Date" required>
+        </div>
+
+        <!-- Workout Time input -->
+        <div class="form-group">
+          <label for="WorkoutTextField">Workout Time</label>
+          <input type="text" class="form-control"
+                 id="WorkoutTextField"
+                 placeholder="Enter workout duration"
+                 name="WorkoutTime" required>
+        </div>
+
+        <!-- Target Areas input -->
+        <div class="form-group">
+          <label for="TargetTextField">Target Areas</label>
+          <input type="text" class="form-control"
+                 id="TargetTextField"
+                 placeholder="Which muscle groups did you target"
+                 name="TargetAreas" required>
+        </div>
+
+        <!-- Exercise List input -->
+        <div class="form-group">
+          <label for="monthTextField">Exercise List</label>
+          <input type="text" class="form-control"
+                 id="monthTextField"
+                 placeholder="List the exercises you did"
+                 name="ExerciseList" required>
+        </div>
+
+        <!-- Reflection textarea -->
+        <div class="form-group">
+          <label for="reflectionField">Reflection</label>
+          <textarea class="form-control"
+                    id="reflectionField"
+                    name="Reflection"
+                    placeholder="How did the workout feel?"
+                    required></textarea>
+        </div>
+
+        <!-- Submit and Delete buttons -->
+        <br>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i> Submit
+        </button>
+        <a href="/Entries" class="btn btn-warning">
+          <i class="fas fa-undo"></i> Delete
+        </a>
+      </form>
+
+    </div>
+  </div>
 </div>
+
+<!-- Include the shared footer partial -->
 <%- include('partials/footer') %>

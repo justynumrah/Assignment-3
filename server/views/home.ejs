@@ -1,9 +1,21 @@
-<%- include ('partials/header') %>
+<!-- Include the shared header partial -->
+<%- include('partials/header') %>
+
+<!-- Spacer below the fixed header -->
 <div class="bg-light p-5 rounded text-center mt-5"></div>
+
+<!-- Main welcome section -->
 <div class="bg-light p-5 rounded text-center">
-    <h1 class="fw-bold">Welcome to Workout Tracker</h1>
-    <p>Track your workouts, log progress, and stay fit! </p>
-    <a href="/workouts" class="btn btn-success">Get Started!</a>
+  
+  <!-- App title -->
+  <h1 class="fw-bold">Welcome to Workout Tracker!</h1>
+  
+  <!-- Brief description -->
+  <p>Track your workouts, log progress, and stay fit!</p>
+  
+  <!-- Button to navigate to workout entries -->
+  <a href="/entries" class="btn btn-success">Get Started!</a>
 </div>
 
+<!-- Include the shared footer partial -->
 <%- include('partials/footer') %>
