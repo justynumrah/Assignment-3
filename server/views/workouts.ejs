@@ -6,15 +6,16 @@
   <% if (workouts.length === 0) { %>
     <p>No workouts saved yet. Add one from the <a href="/entries">Entries page</a>.</p>
   <% } else { %>
-    <table class="table table-striped">
-      <thead>
+    <table class="table table-striped table-hover">
+      <thead class="text-center">
         <tr>
-          <th>Workout Title</th>
-          <th>Date</th>
-          <th>Workout Time</th>
-          <th>Target Areas</th>
-          <th>Exercise List</th>
-          <th>Reflection</th>
+          <th></th>
+          <th class="text-start">Workout Title</th>
+         <th><span style="float: left; padding-left: 50px;">Date</span></th>
+          <th class="text-start">Workout Time</th>
+          <th class="text-start">Target Areas</th>
+          <th class="text-start">Exercise List</th>
+          <th class="text-start">Reflection</th>
         </tr>
       </thead>
       <tbody>
